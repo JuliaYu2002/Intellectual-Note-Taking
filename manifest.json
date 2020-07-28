@@ -1,13 +1,36 @@
 {
-    "name": "Getting Started Example",
+    "name": "Notes",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Taking notes saves lives",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
     },
-    "options_page": "options.html",
+    "commands": {
+        "Copy": {
+            "suggested_key": {
+                "default": "Ctrl+C"
+            },
+            "description": "Copy Text"
+        },
+        "Paste": {
+            "suggested_key": {
+                "default": "Ctrl+V"
+            },
+            "description": "Paste Text"
+        },
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+Y"
+            }
+        },
+        "_execute_page_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+E"
+            }
+        }
+    },
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {
